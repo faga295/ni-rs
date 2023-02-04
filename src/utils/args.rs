@@ -6,3 +6,11 @@ pub fn resolve_args(args: &Vec<String>) -> bool {
     }
     false
 }
+pub fn args_to_string(args: &[String]) -> String {
+    let mut args_str = String::new();
+    for arg in args {
+        args_str += " ";
+        args_str += arg;
+    }
+    args_str
+}
