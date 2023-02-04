@@ -7,7 +7,7 @@ npm i -g ni-rs
 ```
 
 
-`ni-rs` uses [detect-package-manager](https://github.com/egoist/detect-package-manager)'s detect policy.
+`ni-rs` refers to [detect-package-manager](https://github.com/egoist/detect-package-manager)'s detect strategy.
 ## install
 ```
 nirs
