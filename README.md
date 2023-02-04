@@ -10,7 +10,7 @@ npm i -g ni-rs
 `ni-rs` uses [detect-package-manager](https://github.com/egoist/detect-package-manager)'s detect policy.
 ## install
 ```
-ni-rs
+nirs
 
 # npm install
 # yarn install
