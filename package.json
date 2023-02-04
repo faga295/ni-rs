@@ -1,11 +1,11 @@
 {
   "name": "ni-rs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rust implement of ni",
   "files": [
     "target/release/ni-rs"
   ],
-  "bin":{
+  "bin": {
     "nirs": "./target/release/ni-rs"
   },
   "scripts": {
@@ -19,5 +19,4 @@
     "vue": "3.0.0",
     "react": "18.0.0"
   }
-
 }
