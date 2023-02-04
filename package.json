@@ -1,10 +1,17 @@
 {
   "name": "ni-rs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Rust implement of ni",
+  "files": [
+    "target/release/ni-rs"
+  ],
+  "bin":{
+    "ni": "./target/release/ni-rs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cargo build --release",
+    "style": "yarn"
   },
   "author": "",
   "license": "ISC",
