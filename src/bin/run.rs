@@ -1,4 +1,4 @@
-use ni_rs::detect::detect_package_manager;
+use ni_rs::utils::detect::detect_package_manager;
 use std::{env, error::Error, process::Command};
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();

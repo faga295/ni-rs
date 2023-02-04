@@ -1,0 +1,56 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "ni-rs",
+      "version": "0.0.3",
+      "description": "Rust implement of ni",
+      "files": [
+        "target/release"
+      ],
+      "bin": {
+        "nir": "./target/release/install",
+        "nrr": "./target/release/run"
+      },
+      "scripts": {
+        "test": "echo \" no test specified\"",
+        "build": "cargo build --release",
+        "style": "yarn"
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "prefix": "/Users/faga/i/ni-rs"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/faga/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/faga/i/ni-rs/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/faga/i/ni-rs",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "vueuse is not in the npm registry, or you have no permission to fetch it.\n\nAn authorization header was used: Bearer npm_[hidden]",
+    "request": {
+      "authHeaderValue": "Bearer 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",
+      "url": "https://registry.npmjs.org/vueuse"
+    },
+    "response": {
+      "size": 0,
+      "timeout": 60000
+    },
+    "pkgName": "vueuse",
+    "pkgsStack": [],
+    "err": {
+      "name": "Error",
+      "message": "GET https://registry.npmjs.org/vueuse: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "Error: GET https://registry.npmjs.org/vueuse: Not Found - 404\n    at RetryOperation._fn (/Users/faga/.node/corepack/pnpm/6.11.0/dist/pnpm.cjs:79604:18)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    }
+  }
+}

@@ -15,5 +15,8 @@
     "style": "yarn"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.47"
+  }
 }
