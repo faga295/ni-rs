@@ -6,7 +6,7 @@
     "target/release/ni-rs"
   ],
   "bin":{
-    "ni": "./target/release/ni-rs"
+    "nirs": "./target/release/ni-rs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
