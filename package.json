@@ -1,6 +1,6 @@
 {
   "name": "ni-rs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rust implement of ni",
   "files": [
     "target/release"
