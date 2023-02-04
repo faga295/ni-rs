@@ -16,7 +16,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "vue": "^3.2.47"
   }
 }
