@@ -3,20 +3,17 @@
   "version": "0.0.2",
   "description": "Rust implement of ni",
   "files": [
-    "target/release/ni-rs"
+    "target/release"
   ],
   "bin": {
-    "nirs": "./target/release/ni-rs"
+    "nir": "./target/release/install",
+    "nrr": "./target/release/run"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \" no test specified\"",
     "build": "cargo build --release",
     "style": "yarn"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "vue": "3.0.0",
-    "react": "18.0.0"
-  }
+  "license": "MIT"
 }

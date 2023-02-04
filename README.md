@@ -10,9 +10,18 @@ npm i -g ni-rs
 `ni-rs` refers to [detect-package-manager](https://github.com/egoist/detect-package-manager)'s detect strategy.
 ## install
 ```
-nirs
+nir
 
 # npm install
 # yarn install
 # pnpm install
+```
+
+## run
+```
+nrr dev
+
+# npm run dev
+# yarn run dev
+# pnpm run dev 
 ```
