@@ -25,3 +25,13 @@ nrr dev
 # yarn run dev
 # pnpm run dev 
 ```
+
+## execute
+```
+nxr vitest
+
+# npx vitest
+# yarn dlx vitest
+# pnpm dlx vitest
+```
+Make sure your package manager support the above commands.

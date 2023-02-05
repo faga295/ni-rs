@@ -3,11 +3,14 @@
   "version": "0.0.3",
   "description": "Rust implement of ni",
   "files": [
-    "target/release"
+    "target/release/install",
+    "target/release/run",
+    "target/release/execute"
   ],
   "bin": {
     "nir": "./target/release/install",
-    "nrr": "./target/release/run"
+    "nrr": "./target/release/run",
+    "nxr": "./target/release/execute"
   },
   "scripts": {
     "test": "echo \" no test specified\"",
