@@ -1,2 +1,4 @@
 /target
 node_modules
+*.log
+.pnpm-debug.log
