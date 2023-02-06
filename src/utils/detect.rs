@@ -1,7 +1,7 @@
 use serde_json::Value;
 use std::{fs::File, io::Read};
 pub fn detect_package_manager() -> String {
-    let lock_files = ["package.lock", "yarn.lock", "pnpm-lock.yaml"];
+    let lock_files = ["package-lock.json", "yarn.lock", "pnpm-lock.yaml"];
     let manager_list = ["npm", "yarn", "pnpm"];
     let mut manager = String::from("npm");
     for (index, lock_file) in lock_files.into_iter().enumerate() {
