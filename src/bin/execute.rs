@@ -2,8 +2,9 @@ use std::{env, error::Error, process::Command};
 
 use ni_rs::utils::{detect::detect_package_manager, print::print_command};
 
-fn main() -> Result<(), Box<dyn Error>> {
-    let manager = detect_package_manager();
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
+    let manager = detect_package_manager().await;
     let args: Vec<String> = env::args().collect();
     if manager.eq("npm") {
         print_command("npx", "", &args);

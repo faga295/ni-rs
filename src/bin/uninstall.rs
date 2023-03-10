@@ -1,9 +1,10 @@
 use ni_rs::utils::{detect::detect_package_manager, print::print_command};
 use std::{env, error::Error, process::Command};
 
-fn main() -> Result<(), Box<dyn Error>> {
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
     let mut args = env::args().collect();
-    let manager = detect_package_manager();
+    let manager = detect_package_manager().await;
     let global = has_global(&mut args, &manager);
     println!("{:?}", args);
 
