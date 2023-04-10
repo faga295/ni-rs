@@ -8,7 +8,6 @@ pub async fn detect_package_manager() -> String {
     let mut manager = String::from("npm");
     for (index, lock_file) in lock_files.into_iter().enumerate() {
         if let Ok(_) = File::open(lock_file) {
-            println!("file:{}", lock_file);
             detected_list.insert(manager_list[index]);
             manager = manager_list[index].to_string();
         };
