@@ -8,7 +8,6 @@ use std::{
 pub fn resolve_config() -> HashMap<String, HashMap<String, Option<String>>> {
     let rc_path = get_rc_path();
     let config = ini!(rc_path.to_str().unwrap());
-    println!("fas");
     return config;
 }
 

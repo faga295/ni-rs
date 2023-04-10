@@ -16,7 +16,15 @@ nir
 # yarn install
 # pnpm install
 ```
+```
+ni -g eslint
 
+# npm i -g eslint
+# yarn global add eslint (Yarn 1)
+# pnpm add -g eslint
+
+# this uses default agent, regardless your current working directory
+```
 ## run
 ```
 nrr dev

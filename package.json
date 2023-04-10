@@ -14,8 +14,7 @@
   },
   "scripts": {
     "test": "echo \" no test specified\"",
-    "build": "cargo build --release",
-    "style": "yarn"
+    "build": "cargo build --release"
   },
   "author": "",
   "license": "MIT",

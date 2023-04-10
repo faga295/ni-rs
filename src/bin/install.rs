@@ -1,8 +1,5 @@
 use clap::Parser;
-use ni_rs::utils::{
-    config::{get_global_agent, resolve_config},
-    detect::detect_package_manager,
-};
+use ni_rs::utils::{config::get_global_agent, detect::detect_package_manager};
 use std::{error::Error, process::Command};
 
 #[derive(Parser, Debug)]
@@ -21,22 +18,33 @@ struct Cli {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     let cli = Cli::parse();
-    let mut manager = detect_package_manager().await;
+    let manager;
     if cli.global {
-        manager = String::from("npm")
+        manager = get_global_agent();
+    } else {
+        manager = detect_package_manager().await;
     }
     let mut install_arg = "install";
     if cli.dep.len() != 0 && (manager.eq("yarn") || manager.eq("pnpm")) {
         install_arg = "add"
     }
-    if cli.global {
-        manager = get_global_agent();
-    }
+
     let mut install = Command::new(&manager);
+    let mut runner: &mut Command = &mut install;
     if manager.eq("yarn") {
-        install.args(&cli.dep).status()?;
+        if cli.global {
+            runner = runner.arg("global");
+        }
+        if cli.dep.len() != 0 {
+            runner = runner.arg(install_arg);
+        }
+        runner = runner.args(&cli.dep);
     } else {
-        install.arg(install_arg).args(&cli.dep).status()?;
+        runner.arg(install_arg).args(&cli.dep);
+        if cli.global {
+            runner.arg("-g");
+        }
     }
+    runner.status()?;
     Ok(())
 }
