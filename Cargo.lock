@@ -444,7 +444,7 @@ dependencies = [
 
 [[package]]
 name = "ni-rs"
-version = "0.0.5"
+version = "0.0.7"
 dependencies = [
  "clap",
  "ini",
